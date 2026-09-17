@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Z H Apprael - Premium Denim & Cargo Pants</title>
+    <style>
+        :root {
+            --bg-color: #0d0d0d;
+            --card-bg: #161616;
+            --accent-blue: #1d4ed8;
+            --text-main: #f3f4f6;
+            --text-muted: #9ca3af;
+            --border-color: #262626;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: rgba(13, 13, 13, 0.95);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-container img {
+            height: 45px;
+            width: 45px;
+            object-fit: contain;
+            border-radius: 6px;
+        }
+
+        .brand-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            color: var(--text-main);
+        }
+
+        .contact-btn {
+            background-color: #25d366;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: opacity 0.2s;
+        }
+
+        .contact-btn:hover {
+            opacity: 0.9;
+        }
+
+        .hero {
+            padding: 4rem 1rem;
+            text-align: center;
+            background: linear-gradient(to bottom, #161616, var(--bg-color));
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+
+        .hero p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 1rem;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .products-grid {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        .product-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            overflow: hidden;
+            width: 100%;
+            max-width: 380px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+
+        .product-details {
+            padding: 1.5rem;
+        }
+
+        .product-name {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .product-desc {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+        }
+
+        .size-selector {
+            margin-bottom: 1.5rem;
+        }
+
+        .size-selector label {
+            display: block;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-muted);
+        }
+
+        .size-options {
+            display: flex;
+            gap: 10px;
+        }
+
+        .size-btn {
+            background-color: var(--bg-color);
+            border: 1px solid var(--border-color);
+            color: var(--text-main);
+            padding: 0.5rem 0.8rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+
+        .size-btn.active {
+            border-color: var(--text-main);
+            background-color: #262626;
+        }
+
+        .whatsapp-order-btn {
+            display: block;
+            width: 100%;
+            background-color: #25d366;
+            color: white;
+            text-align: center;
+            padding: 0.75rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: opacity 0.2s;
+        }
+
+        .whatsapp-order-btn:hover {
+            opacity: 0.9;
+        }
+
+        footer {
+            background-color: var(--card-bg);
+            border-top: 1px solid var(--border-color);
+            padding: 2.5rem 1rem;
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .footer-content h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-content p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img src="logo.png" alt="Z H Apprael Logo">
+            <span class="brand-title">Z H APPRAEL</span>
+        </div>
+        <a href="https://wa.me/923098858061?text=Hello,%20I%20want%20to%20inquire%20about%20your%20products." class="contact-btn" target="_blank">Contact Us</a>
+    </header>
+
+    <section class="hero">
+        <h1>PREMIUM STREETWEAR & CARGO PANTS</h1>
+        <p>Explore high-quality, comfortable, and modern apparel crafted for style and daily wear.</p>
+    </section>
+
+    <main class="container">
+        <h2 class="section-title">Featured Product</h2>
+        <div class="products-grid">
+            <div class="product-card">
+                <img src="cargo.jpg" alt="Cargo Pant" class="product-image">
+                <div class="product-details">
+                    <h3 class="product-name">Modern Streetwear Cargo Pant</h3>
+                    <p class="product-desc">Premium quality fabric with comfortable drawstring waist and functional side pockets.</p>
+                    
+                    <div class="size-selector">
+                        <label>Select Size:</label>
+                        <div class="size-options" id="sizeOptions">
+                            <button class="size-btn active" onclick="selectSize(this, '30')">30</button>
+                            <button class="size-btn" onclick="selectSize(this, '32')">32</button>
+                            <button class="size-btn" onclick="selectSize(this, '34')">34</button>
+                            <button class="size-btn" onclick="selectSize(this, '36')">36</button>
+                        </div>
+                    </div>
+
+                    <a href="#" id="whatsappLink" class="whatsapp-order-btn" target="_blank" onclick="prepareOrder(event)">Order via WhatsApp</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <h3>Z H APPRAEL</h3>
+            <p><strong>Owners:</strong> Rayan Arshad & Usman Arshad</p>
+            <p><strong>Phone Numbers:</strong> +92 309 8858061 | +92 309 4714104</p>
+            <p style="margin-top: 1.5rem; font-size: 0.8rem; color: #6b7280;">&copy; 2026 Z H Apprael. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        let selectedSize = '30';
+
+        function selectSize(element, size) {
+            document.querySelectorAll('.size-btn').forEach(btn => btn.classList.remove('active'));
+            element.classList.add('active');
+            selectedSize = size;
+        }
+
+        function prepareOrder(event) {
+            event.preventDefault();
+            const phoneNumber = '923098858061';
+            const message = `Hello, I want to order the Modern Streetwear Cargo Pant in Size: ${selectedSize}. Please confirm my order.`;
+            const encodedMessage = encodeURIComponent(message);
+            window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank');
+        }
+    </script>
+
+</body>
+</html>
