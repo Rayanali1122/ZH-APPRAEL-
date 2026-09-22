@@ -1,296 +1,124 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Z H Apprael - Premium Denim & Cargo Pants</title>
-    <style>
-        :root {
-            --bg-color: #0d0d0d;
-            --card-bg: #161616;
-            --accent-blue: #1d4ed8;
-            --text-main: #f3f4f6;
-            --text-muted: #9ca3af;
-            --border-color: #262626;
-        }
+import { Link } from 'react-router';
+import { ArrowRight, Truck, Shield, Star, MessageCircle } from 'lucide-react';
+import Layout from '@/components/Layout';
+import heroImage from '@/assets/generated/zh-hero.png';
+import cargoImage from '@/assets/generated/cargo-baggy.png';
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
+export default function Index() {
+  // Aapka WhatsApp number yahan set kar diya gaya hai
+  const whatsappNumber = "+923098858061"; 
+  const orderMessage = encodeURIComponent("Hello Z H Apparel, I want to order the Cargo Baggy Pants.");
+  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${orderMessage}`;
 
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            line-height: 1.6;
-        }
-
-        header {
-            background-color: rgba(13, 13, 13, 0.95);
-            border-bottom: 1px solid var(--border-color);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            padding: 1rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo-container {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .logo-container img {
-            height: 45px;
-            width: 45px;
-            object-fit: contain;
-            border-radius: 6px;
-        }
-
-        .brand-title {
-            font-size: 1.25rem;
-            font-weight: 700;
-            letter-spacing: 1px;
-            color: var(--text-main);
-        }
-
-        .contact-btn {
-            background-color: #25d366;
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 4px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.9rem;
-            transition: opacity 0.2s;
-        }
-
-        .contact-btn:hover {
-            opacity: 0.9;
-        }
-
-        .hero {
-            padding: 4rem 1rem;
-            text-align: center;
-            background: linear-gradient(to bottom, #161616, var(--bg-color));
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        .hero h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            font-weight: 800;
-        }
-
-        .hero p {
-            color: var(--text-muted);
-            font-size: 1.1rem;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 3rem 1rem;
-        }
-
-        .section-title {
-            font-size: 1.8rem;
-            margin-bottom: 2rem;
-            text-align: center;
-            font-weight: 700;
-        }
-
-        .products-grid {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-        }
-
-        .product-card {
-            background-color: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            overflow: hidden;
-            width: 100%;
-            max-width: 380px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-        }
-
-        .product-image {
-            width: 100%;
-            height: 400px;
-            object-fit: cover;
-        }
-
-        .product-details {
-            padding: 1.5rem;
-        }
-
-        .product-name {
-            font-size: 1.3rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
-
-        .product-desc {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            margin-bottom: 1rem;
-        }
-
-        .size-selector {
-            margin-bottom: 1.5rem;
-        }
-
-        .size-selector label {
-            display: block;
-            font-size: 0.9rem;
-            margin-bottom: 0.5rem;
-            color: var(--text-muted);
-        }
-
-        .size-options {
-            display: flex;
-            gap: 10px;
-        }
-
-        .size-btn {
-            background-color: var(--bg-color);
-            border: 1px solid var(--border-color);
-            color: var(--text-main);
-            padding: 0.5rem 0.8rem;
-            border-radius: 4px;
-            cursor: pointer;
-            font-weight: 600;
-            transition: all 0.2s;
-        }
-
-        .size-btn.active {
-            border-color: var(--text-main);
-            background-color: #262626;
-        }
-
-        .whatsapp-order-btn {
-            display: block;
-            width: 100%;
-            background-color: #25d366;
-            color: white;
-            text-align: center;
-            padding: 0.75rem;
-            border-radius: 4px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: opacity 0.2s;
-        }
-
-        .whatsapp-order-btn:hover {
-            opacity: 0.9;
-        }
-
-        footer {
-            background-color: var(--card-bg);
-            border-top: 1px solid var(--border-color);
-            padding: 2.5rem 1rem;
-            text-align: center;
-            margin-top: 4rem;
-        }
-
-        .footer-content {
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .footer-content h3 {
-            font-size: 1.2rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .footer-content p {
-            color: var(--text-muted);
-            font-size: 0.9rem;
-            margin-bottom: 0.5rem;
-        }
-
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2rem;
-            }
-        }
-    </style>
-</head>
-<body>
-
-    <header>
-        <div class="logo-container">
-            <img src="logo.png" alt="Z H Apprael Logo">
-            <span class="brand-title">Z H APPRAEL</span>
+  return (
+    <Layout>
+      {/* Hero Section */}
+      <section className="relative min-h-[90vh] flex items-center overflow-hidden">
+        <div className="absolute inset-0">
+          <img
+            src={heroImage}
+            alt="ZH Apparel Hero"
+            className="w-full h-full object-cover object-center opacity-60"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-zh-black via-zh-black/80 to-transparent" />
         </div>
-        <a href="https://wa.me/923098858061?text=Hello,%20I%20want%20to%20inquire%20about%20your%20products." class="contact-btn" target="_blank">Contact Us</a>
-    </header>
-
-    <section class="hero">
-        <h1>PREMIUM STREETWEAR & CARGO PANTS</h1>
-        <p>Explore high-quality, comfortable, and modern apparel crafted for style and daily wear.</p>
-    </section>
-
-    <main class="container">
-        <h2 class="section-title">Featured Product</h2>
-        <div class="products-grid">
-            <div class="product-card">
-                <img src="cargo.jpg" alt="Cargo Pant" class="product-image">
-                <div class="product-details">
-                    <h3 class="product-name">Modern Streetwear Cargo Pant</h3>
-                    <p class="product-desc">Premium quality fabric with comfortable drawstring waist and functional side pockets.</p>
-                    
-                    <div class="size-selector">
-                        <label>Select Size:</label>
-                        <div class="size-options" id="sizeOptions">
-                            <button class="size-btn active" onclick="selectSize(this, '30')">30</button>
-                            <button class="size-btn" onclick="selectSize(this, '32')">32</button>
-                            <button class="size-btn" onclick="selectSize(this, '34')">34</button>
-                            <button class="size-btn" onclick="selectSize(this, '36')">36</button>
-                        </div>
-                    </div>
-
-                    <a href="#" id="whatsappLink" class="whatsapp-order-btn" target="_blank" onclick="prepareOrder(event)">Order via WhatsApp</a>
-                </div>
+        
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+          <div className="max-w-2xl animate-fade-in">
+            <p className="text-zh-denim-light tracking-[0.3em] uppercase text-sm mb-4">Z H Apparel</p>
+            <h1 className="text-5xl md:text-7xl font-bold text-zh-white mb-6 leading-tight">
+              Cargo Baggy<br />
+              <span className="gradient-text">Denim Jeans</span>
+            </h1>
+            <p className="text-zh-gray text-lg mb-8 max-w-md">
+              Handcrafted cargo baggy pants designed for ultimate streetwear style and comfort. Available in sizes 30, 32, 34, and 36.
+            </p>
+            <div className="flex flex-wrap gap-4 items-center">
+              <span className="text-3xl font-bold text-zh-white">Rs. 2,000</span>
+              <a
+                href={whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-3 bg-green-600 hover:bg-green-500 text-white px-8 py-4 rounded-lg transition-all duration-300 font-semibold"
+              >
+                <MessageCircle className="w-5 h-5" />
+                Order on WhatsApp
+              </a>
             </div>
+          </div>
         </div>
-    </main>
+      </section>
 
-    <footer>
-        <div class="footer-content">
-            <h3>Z H APPRAEL</h3>
-            <p><strong>Owners:</strong> Rayan Arshad & Usman Arshad</p>
-            <p><strong>Phone Numbers:</strong> +92 309 8858061 | +92 309 4714104</p>
-            <p style="margin-top: 1.5rem; font-size: 0.8rem; color: #6b7280;">&copy; 2026 Z H Apprael. All rights reserved.</p>
+      {/* Product Showcase Section */}
+      <section className="py-24 bg-zh-black">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="relative">
+              <div className="aspect-square rounded-2xl overflow-hidden product-3d-hover">
+                <img
+                  src={cargoImage}
+                  alt="Cargo Baggy Pants"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-zh-denim/20 rounded-full blur-3xl" />
+            </div>
+            <div>
+              <p className="text-zh-denim-light tracking-[0.2em] uppercase text-sm mb-4">Featured Product</p>
+              <h2 className="text-4xl md:text-5xl font-bold text-zh-white mb-6">Cargo Baggy Pants</h2>
+              <p className="text-xl text-zh-denim-light font-semibold mb-6">
+                Price: Rs. 2,000
+              </p>
+              <p className="text-zh-gray mb-8 leading-relaxed">
+                Premium quality denim cargo pants featuring a relaxed baggy fit, multiple utility pockets, and adjustable drawstring waist for superior streetwear aesthetics.
+              </p>
+              
+              {/* Sizes Selection */}
+              <div className="mb-8">
+                <p className="text-zh-white font-medium mb-3">Available Sizes:</p>
+                <div className="flex gap-3">
+                  {['30', '32', '34', '36'].map((size) => (
+                    <span key={size} className="px-4 py-2 rounded-lg bg-zh-charcoal text-zh-white border border-zh-denim/30 font-semibold">
+                      {size}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              <a
+                href={whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-3 bg-zh-denim hover:bg-zh-denim-light text-white px-8 py-4 rounded-lg transition-all duration-300 font-semibold"
+              >
+                <MessageCircle className="w-5 h-5" />
+                Order via WhatsApp Now
+              </a>
+            </div>
+          </div>
         </div>
-    </footer>
+      </section>
 
-    <script>
-        let selectedSize = '30';
-
-        function selectSize(element, size) {
-            document.querySelectorAll('.size-btn').forEach(btn => btn.classList.remove('active'));
-            element.classList.add('active');
-            selectedSize = size;
-        }
-
-        function prepareOrder(event) {
-            event.preventDefault();
-            const phoneNumber = '923098858061';
-            const message = `Hello, I want to order the Modern Streetwear Cargo Pant in Size: ${selectedSize}. Please confirm my order.`;
-            const encodedMessage = encodeURIComponent(message);
-            window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank');
-        }
-    </script>
-
-</body>
-</html>
+      {/* Features Section */}
+      <section className="py-20 bg-zh-charcoal">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              { icon: Star, title: 'Premium Quality', desc: 'Finest denim materials crafted for durability' },
+              { icon: Truck, title: 'Fast Delivery', desc: 'Nationwide shipping with order tracking' },
+              { icon: Shield, title: 'Secure Ordering', desc: 'Direct order placement and confirmation via WhatsApp' }
+            ].map((feature, i) => (
+              <div key={i} className="glass-card p-8 rounded-xl text-center hover:border-zh-denim/50 transition-colors">
+                <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-zh-denim/20 flex items-center justify-center">
+                  <feature.icon className="w-7 h-7 text-zh-denim-light" />
+                </div>
+                <h3 className="text-zh-white font-semibold text-lg mb-2">{feature.title}</h3>
+                <p className="text-zh-gray text-sm">{feature.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    </Layout>
+  );
+}
