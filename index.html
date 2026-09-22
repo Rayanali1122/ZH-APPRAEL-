@@ -83,7 +83,6 @@
             cursor: pointer;
         }
         
-        /* Studio Neon Hero Section */
         .hero {
             display: grid;
             grid-template-columns: 1.2fr 0.8fr;
@@ -98,7 +97,6 @@
             position: relative;
             overflow: hidden;
         }
-        /* Neon Glow Accents */
         .hero::before {
             content: '';
             position: absolute;
@@ -163,17 +161,17 @@
             overflow: hidden;
             border: 1px solid rgba(138, 43, 226, 0.5);
             box-shadow: 0 0 25px rgba(138, 43, 226, 0.4);
+            background: #000;
         }
         .hero-img {
             width: 100%;
             height: 350px;
             object-fit: cover;
             display: block;
-            transform: scale(1.02);
             transition: 0.5s ease;
         }
         .hero-img:hover {
-            transform: scale(1.08);
+            transform: scale(1.05);
         }
 
         .btn {
@@ -375,7 +373,7 @@
             <button class="menu-btn">&#9776;</button>
         </header>
 
-        <!-- Neon Gaming/Studio Hero Section -->
+        <!-- Neon Studio Hero Section with Pant Image -->
         <section class="hero">
             <div class="hero-content">
                 <span class="studio-badge">⚡ Neon Studio Edition</span>
@@ -384,7 +382,7 @@
                 <a href="#shop" class="btn">Explore Studio &rarr;</a>
             </div>
             <div class="hero-img-box">
-                <img src="https://images.unsplash.com/photo-1542272604-787c96355353?auto=format&fit=crop&w=800&q=80" alt="Streetwear Denim Showcase" class="hero-img">
+                <img src="pant.jpg" alt="Streetwear Denim Showcase" class="hero-img" onerror="this.src='https://images.unsplash.com/photo-1542272604-787c96355353?auto=format&fit=crop&w=800&q=80'">
             </div>
         </section>
 
@@ -410,7 +408,7 @@
             
             <div class="product-grid">
                 <div class="product-card">
-                    <img src="pant.jpg" alt="Beige Cargo Baggy Denim Pant" class="product-img">
+                    <img src="pant.jpg" alt="Beige Cargo Baggy Denim Pant" class="product-img" onerror="this.src='https://images.unsplash.com/photo-1542272604-787c96355353?auto=format&fit=crop&w=800&q=80'">
                     <div class="product-info">
                         <div class="product-category">Neon Denim Series</div>
                         <div class="product-name">Beige Cargo Baggy Denim Pant</div>
