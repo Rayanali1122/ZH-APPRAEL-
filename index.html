@@ -1,46 +1,250 @@
-<!DOCTYPE html>
+# Python code to generate the HTML file for Z H Apparel website
+html_content = """<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Z H Apparel - Cargo Baggy Pants</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>ZH Apparel - Premium Denim & Streetwear</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+        body {
+            background-color: #0b0b0b;
+            color: #ffffff;
+            line-height: 1.5;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #0b0b0b;
+            border-bottom: 1px solid #222;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .logo {
+            font-size: 22px;
+            font-weight: 800;
+            letter-spacing: 1px;
+        }
+        .logo span {
+            font-weight: 300;
+            font-size: 16px;
+            margin-left: 5px;
+            color: #aaa;
+        }
+        .menu-btn {
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        .hero {
+            padding: 60px 20px;
+            text-align: left;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1542272604-787c96355353?auto=format&fit=crop&w=800&q=80') no-repeat center center/cover;
+        }
+        .hero h1 {
+            font-size: 38px;
+            font-weight: 800;
+            margin-bottom: 15px;
+            line-height: 1.1;
+        }
+        .hero p {
+            color: #bbb;
+            font-size: 15px;
+            margin-bottom: 30px;
+        }
+        .btn {
+            display: inline-block;
+            background-color: #ffffff;
+            color: #0b0b0b;
+            padding: 12px 24px;
+            border-radius: 4px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+        .btn:hover {
+            background-color: #ddd;
+        }
+        .section {
+            padding: 40px 20px;
+        }
+        .section-title {
+            font-size: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #888;
+            margin-bottom: 20px;
+        }
+        .features {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .feature-card {
+            background-color: #161616;
+            border: 1px solid #262626;
+            padding: 24px;
+            border-radius: 8px;
+        }
+        .feature-card h3 {
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+        .feature-card p {
+            color: #999;
+            font-size: 14px;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+        .product-card {
+            background-color: #141414;
+            border: 1px solid #222;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .product-img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+        }
+        .product-info {
+            padding: 20px;
+        }
+        .product-category {
+            font-size: 12px;
+            color: #888;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+        .product-name {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        .product-price {
+            font-size: 18px;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 15px;
+        }
+        .product-price span {
+            font-size: 13px;
+            color: #888;
+            font-weight: 400;
+        }
+        .whatsapp-btn {
+            display: block;
+            width: 100%;
+            background-color: #25D366;
+            color: white;
+            text-align: center;
+            padding: 12px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 10px;
+        }
+        footer {
+            background-color: #050505;
+            padding: 40px 20px;
+            border-top: 1px solid #222;
+            margin-top: 40px;
+            color: #777;
+            font-size: 14px;
+        }
+        footer h4 {
+            color: #fff;
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+        footer ul {
+            list-style: none;
+            margin-bottom: 20px;
+        }
+        footer ul li {
+            margin-bottom: 8px;
+        }
+        footer ul li a {
+            color: #999;
+            text-decoration: none;
+        }
+    </style>
 </head>
-<body class="bg-black text-white font-sans">
-    <header class="p-6 border-b border-zinc-800 flex justify-between items-center max-w-7xl mx-auto">
-        <h1 class="text-xl font-bold tracking-wider">Z H APPAREL</h1>
-        <a href="https://wa.me/+923098858061?text=Hello%20Z%20H%20Apparel,%20I%20want%20to%20order%20the%20Cargo%20Baggy%20Pants." target="_blank" class="bg-green-600 hover:bg-green-500 px-5 py-2.5 rounded-lg font-semibold transition text-sm">Order on WhatsApp</a>
+<body>
+
+    <header>
+        <div class="logo">ZH <span>APPAREL</span></div>
+        <button class="menu-btn">&#9776;</button>
     </header>
 
-    <main class="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-        <div>
-            <span class="text-blue-400 tracking-widest uppercase text-xs font-semibold">Premium Streetwear</span>
-            <h2 class="text-4xl md:text-5xl font-bold mt-2 mb-4">Cargo Baggy Denim Jeans</h2>
-            <p class="text-zinc-400 text-base mb-6 leading-relaxed">
-                Handcrafted denim cargo pants designed for ultimate streetwear style and comfort. Features multiple utility pockets, a relaxed baggy fit, and superior quality material.
-            </p>
-            <div class="text-3xl font-bold text-white mb-6">Rs. 2,000</div>
-            
-            <div class="mb-8">
-                <p class="text-zinc-300 font-medium mb-3 text-sm">Available Sizes:</p>
-                <div class="flex gap-3">
-                    <span class="px-4 py-2 rounded-lg bg-zinc-900 border border-zinc-700 font-semibold text-sm">30</span>
-                    <span class="px-4 py-2 rounded-lg bg-zinc-900 border border-zinc-700 font-semibold text-sm">32</span>
-                    <span class="px-4 py-2 rounded-lg bg-zinc-900 border border-zinc-700 font-semibold text-sm">34</span>
-                    <span class="px-4 py-2 rounded-lg bg-zinc-900 border border-zinc-700 font-semibold text-sm">36</span>
+    <section class="hero">
+        <h1>Elevate Your Streetwear</h1>
+        <p>Handcrafted denim jeans designed for those who demand both style and comfort. Premium quality, modern aesthetics.</p>
+        <a href="#shop" class="btn">Shop Collection &rarr;</a>
+    </section>
+
+    <section class="section">
+        <div class="features">
+            <div class="feature-card">
+                <h3>⭐ Premium Quality</h3>
+                <p>Finest denim materials crafted for durability.</p>
+            </div>
+            <div class="feature-card">
+                <h3>📦 Fast Delivery</h3>
+                <p>Nationwide shipping with order tracking.</p>
+            </div>
+            <div class="feature-card">
+                <h3>🛡️ Secure Checkout</h3>
+                <p>Your payment information is always safe.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="shop">
+        <div class="section-title">Collection - Denim Jeans</div>
+        
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=600&q=80" alt="Cargo Baggy Denim Pant" class="product-img">
+                <div class="product-info">
+                    <div class="product-category">Denim Jeans</div>
+                    <div class="product-name">Cargo Baggy Denim Pant</div>
+                    <div class="product-price">Rs. 2,000 <span>+ Rs. 400 delivery</span></div>
+                    <p style="font-size: 13px; color: #aaa; margin-bottom: 15px;">Available Sizes: 32, 34, 36</p>
+                    <a href="https://wa.me/923098858061?text=Hi,%20I%20want%20to%20order%20Cargo%20Baggy%20Denim%20Pant%20(Rs.%202,000)." class="whatsapp-btn" target="_blank">Order via WhatsApp</a>
                 </div>
             </div>
-
-            <a href="https://wa.me/+923098858061?text=Hello%20Z%20H%20Apparel,%20I%20want%20to%20order%20the%20Cargo%20Baggy%20Pants." target="_blank" class="inline-flex items-center justify-center bg-green-600 hover:bg-green-500 text-white px-8 py-4 rounded-xl font-bold transition w-full md:w-auto shadow-lg shadow-green-900/20">
-                Order via WhatsApp Now
-            </a>
         </div>
+    </section>
 
-        <div class="relative">
-            <div class="rounded-2xl overflow-hidden border border-zinc-800 shadow-2xl bg-zinc-900 aspect-square">
-                <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=800&q=80" alt="Cargo Baggy Pants" class="w-full h-full object-cover">
-            </div>
-        </div>
-    </main>
+    <footer>
+        <h4>ZH APPAREL</h4>
+        <p style="margin-bottom: 20px;">Premium denim for the modern streetwear enthusiast.</p>
+        <h4>Quick Links</h4>
+        <ul>
+            <li><a href="#shop">Shop</a></li>
+            <li><a href="https://wa.me/923098858061" target="_blank">Contact WhatsApp: 03098858061</a></li>
+        </ul>
+        <p>&copy; 2026 ZH Apparel. All rights reserved.</p>
+    </footer>
+
 </body>
 </html>
+"""
+
+with open("zh_apparel.html", "w", encoding="utf-8") as f:
+    f.freetext = html_content if hasattr(f, 'freetext') else f.write(html_content)
