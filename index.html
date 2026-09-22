@@ -32,6 +32,16 @@
             top: 0;
             z-index: 1000;
         }
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .site-logo {
+            height: 35px;
+            width: auto;
+            object-fit: contain;
+        }
         .logo {
             font-size: 24px;
             font-weight: 800;
@@ -244,7 +254,10 @@
 
     <div class="container">
         <header>
-            <div class="logo">ZH <span>APPAREL</span></div>
+            <div class="logo-container">
+                <img src="logo.png" alt="ZH Apparel Logo" class="site-logo" onerror="this.style.display='none'">
+                <div class="logo">ZH <span>APPAREL</span></div>
+            </div>
             <ul class="nav-links">
                 <li><a href="#">Home</a></li>
                 <li><a href="#shop">Shop</a></li>
@@ -281,8 +294,7 @@
             
             <div class="product-grid">
                 <div class="product-card">
-                    <!-- Aap ki di gayi nayi black cargo pant wali image -->
-                    <img src="https://i.ibb.co/689L44N/137021.png" alt="Black Cargo Baggy Denim Pant" class="product-img">
+                    <img src="pant.jpg" alt="Black Cargo Baggy Denim Pant" class="product-img">
                     <div class="product-info">
                         <div class="product-category">Denim Jeans</div>
                         <div class="product-name">Black Cargo Baggy Denim Pant</div>
