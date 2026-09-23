@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ZH Apparel - Multi-Light Neon Studio</title>
+    <!-- Google Font for Super Clean & Stylish Branding -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800;900&family=Plus+Jakarta+Sans:wght@500;700;800&display=swap" rel="stylesheet">
     <style>
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            font-family: 'Plus Jakarta Sans', sans-serif;
         }
         body {
             background-color: #010103;
@@ -42,26 +44,29 @@
         .logo-container {
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 12px;
         }
         .site-logo {
-            height: 35px;
+            height: 38px;
             width: auto;
             object-fit: contain;
         }
+        /* Stylish Gaming/Studio Branding Font */
         .logo {
-            font-size: 24px;
-            font-weight: 800;
-            letter-spacing: 1px;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 26px;
+            font-weight: 900;
+            letter-spacing: 2px;
             color: #fff;
-            text-shadow: 0 0 12px rgba(138, 43, 226, 0.9), 0 0 25px rgba(0, 243, 255, 0.6);
+            text-shadow: 0 0 15px rgba(138, 43, 226, 0.9), 0 0 30px rgba(0, 243, 255, 0.6);
         }
         .logo span {
-            font-weight: 300;
+            font-weight: 600;
             font-size: 16px;
-            margin-left: 5px;
+            margin-left: 6px;
             color: #00f3ff;
-            text-shadow: 0 0 10px rgba(0, 243, 255, 0.8);
+            text-shadow: 0 0 12px rgba(0, 243, 255, 0.9);
+            letter-spacing: 3px;
         }
         .nav-links {
             display: flex;
@@ -71,7 +76,7 @@
         .nav-links a {
             color: #aaa;
             text-decoration: none;
-            font-weight: 500;
+            font-weight: 600;
             transition: 0.3s;
         }
         .nav-links a:hover {
@@ -87,7 +92,7 @@
             cursor: pointer;
         }
         
-        /* 1. Hero Section - Purple & Cyan Multi-Lighting Zone */
+        /* Hero Section */
         .hero {
             display: grid;
             grid-template-columns: 1.1fr 0.9fr;
@@ -116,14 +121,23 @@
             color: #00f3ff;
             text-shadow: 0 0 15px rgba(0, 243, 255, 0.7);
         }
+        
+        /* Premium Multi-Color Glow Effect for Muhammad Rayan */
         .hero-creator {
-            font-size: 14px;
-            color: #ff007f;
-            font-weight: 700;
+            display: inline-block;
+            font-size: 13px;
+            font-weight: 800;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 2px;
             margin-bottom: 15px;
-            letter-spacing: 1px;
-            text-shadow: 0 0 12px rgba(255, 0, 127, 0.6);
+            padding: 6px 16px;
+            background: linear-gradient(90deg, rgba(255, 0, 128, 0.2), rgba(138, 43, 226, 0.3));
+            border: 1px solid rgba(255, 0, 127, 0.6);
+            border-radius: 30px;
+            box-shadow: 0 0 20px rgba(255, 0, 127, 0.5), 0 0 10px rgba(138, 43, 226, 0.5);
         }
+
         .hero p {
             color: #ccc;
             font-size: 14px;
@@ -140,7 +154,7 @@
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 2px;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
             box-shadow: 0 0 15px rgba(138, 43, 226, 0.4);
         }
         .hero-img-box {
@@ -192,7 +206,7 @@
             text-shadow: 0 0 10px rgba(255, 0, 127, 0.5);
         }
 
-        /* 2. Features Section - Cyan & Blue Multi-Lighting Zone */
+        /* Features Section */
         .features {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -222,7 +236,7 @@
             font-size: 12px;
         }
         
-        /* 3. Product Grid Section - Pink & Neon Multi-Lighting Zone */
+        /* Products Grid Section */
         .product-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -443,11 +457,11 @@
             <button class="menu-btn">&#9776;</button>
         </header>
 
-        <!-- Hero Section (Purple/Cyan Lighting Zone) -->
+        <!-- Hero Section -->
         <section class="hero">
             <div class="hero-content">
                 <span class="studio-badge">⚡ Multi-Light Studio Edition</span>
-                <div class="hero-creator">Curated by Muhammad Rayan</div>
+                <div class="hero-creator">✨ Curated by Muhammad Rayan</div>
                 <h1>Next-Gen <span>Cargo Denim</span> Baggy Trousers</h1>
                 <p>Premium baggy fit cargo trousers engineered with heavy-duty 12oz denim fabric for extreme street style and comfort.</p>
                 <a href="#shop" class="btn">Explore Studio &rarr;</a>
@@ -457,7 +471,7 @@
             </div>
         </section>
 
-        <!-- Features Section (Cyan/Blue Lighting Zone) -->
+        <!-- Features Section -->
         <section class="section">
             <div class="features">
                 <div class="feature-card">
@@ -475,7 +489,7 @@
             </div>
         </section>
 
-        <!-- Products Section (Pink/Neon Multi-Lighting Zone) -->
+        <!-- Products Section -->
         <section class="section" id="shop">
             <div class="section-title">Studio Collection - Cargo Trousers</div>
             
