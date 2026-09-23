@@ -85,10 +85,10 @@
         
         .hero {
             display: grid;
-            grid-template-columns: 1.2fr 0.8fr;
-            gap: 40px;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 30px;
             align-items: center;
-            padding: 60px 40px;
+            padding: 50px 35px;
             background: linear-gradient(135deg, rgba(15, 10, 30, 0.9), rgba(5, 5, 10, 0.95));
             border-radius: 20px;
             margin: 30px 0;
@@ -123,11 +123,11 @@
             z-index: 2;
         }
         .hero h1 {
-            font-size: 44px;
+            font-size: 38px;
             font-weight: 800;
             margin-bottom: 15px;
-            line-height: 1.1;
-            letter-spacing: -1px;
+            line-height: 1.15;
+            letter-spacing: -0.5px;
             color: #fff;
             text-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
         }
@@ -136,9 +136,9 @@
             text-shadow: 0 0 15px rgba(0, 243, 255, 0.6);
         }
         .hero p {
-            color: #aaa;
-            font-size: 16px;
-            margin-bottom: 30px;
+            color: #ccc;
+            font-size: 15px;
+            margin-bottom: 25px;
         }
         .studio-badge {
             display: inline-block;
@@ -165,21 +165,17 @@
         }
         .hero-img {
             width: 100%;
-            height: 400px;
+            height: 350px;
             object-fit: contain;
             background-color: #050508;
             display: block;
-            transition: 0.5s ease;
-        }
-        .hero-img:hover {
-            transform: scale(1.02);
         }
 
         .btn {
             display: inline-block;
             background: linear-gradient(135deg, #00f3ff, #8a2be2);
             color: #fff;
-            padding: 14px 28px;
+            padding: 12px 24px;
             border-radius: 8px;
             font-weight: 600;
             text-decoration: none;
@@ -191,14 +187,14 @@
             box-shadow: 0 0 25px rgba(0, 243, 255, 0.8), 0 0 25px rgba(138, 43, 226, 0.8);
         }
         .section {
-            padding: 50px 0;
+            padding: 40px 0;
         }
         .section-title {
             font-size: 22px;
             text-transform: uppercase;
             letter-spacing: 2px;
             color: #fff;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
             font-weight: 700;
             border-left: 4px solid #00f3ff;
             padding-left: 12px;
@@ -213,24 +209,18 @@
             background: rgba(15, 12, 25, 0.6);
             backdrop-filter: blur(10px);
             border: 1px solid rgba(138, 43, 226, 0.2);
-            padding: 25px;
+            padding: 20px;
             border-radius: 12px;
-            transition: all 0.4s ease;
             box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
-        .feature-card:hover {
-            transform: translateY(-5px);
-            border-color: rgba(0, 243, 255, 0.6);
-            box-shadow: 0 0 20px rgba(0, 243, 255, 0.3);
-        }
         .feature-card h3 {
-            font-size: 18px;
+            font-size: 16px;
             margin-bottom: 8px;
             color: #fff;
         }
         .feature-card p {
             color: #999;
-            font-size: 14px;
+            font-size: 13px;
         }
         .product-grid {
             display: grid;
@@ -243,47 +233,36 @@
             border: 1px solid rgba(138, 43, 226, 0.3);
             border-radius: 16px;
             overflow: hidden;
-            transition: all 0.4s ease;
             box-shadow: 0 15px 35px rgba(0,0,0,0.7);
-        }
-        .product-card:hover {
-            transform: translateY(-8px);
-            border-color: #00f3ff;
-            box-shadow: 0 0 30px rgba(0, 243, 255, 0.4), 0 0 30px rgba(138, 43, 226, 0.4);
         }
         .product-img {
             width: 100%;
-            height: 380px;
+            height: 350px;
             object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-        .product-card:hover .product-img {
-            transform: scale(1.05);
         }
         .product-info {
-            padding: 24px;
+            padding: 20px;
         }
         .product-category {
             font-size: 12px;
             color: #00f3ff;
             text-transform: uppercase;
             letter-spacing: 1.5px;
-            margin-bottom: 8px;
-            text-shadow: 0 0 8px rgba(0, 243, 255, 0.5);
+            margin-bottom: 6px;
         }
         .product-name {
-            font-size: 20px;
+            font-size: 18px;
             font-weight: 700;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
         .product-price {
-            font-size: 18px;
+            font-size: 17px;
             font-weight: 600;
             color: #fff;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
         }
         .product-price span {
-            font-size: 13px;
+            font-size: 12px;
             color: #888;
             font-weight: 400;
         }
@@ -297,54 +276,66 @@
             border-radius: 8px;
             text-decoration: none;
             font-weight: 600;
-            margin-top: 15px;
-            transition: all 0.3s ease;
+            margin-top: 12px;
             box-shadow: 0 0 15px rgba(37, 211, 102, 0.4);
-        }
-        .whatsapp-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 0 25px rgba(37, 211, 102, 0.8);
         }
         footer {
             background: rgba(3, 3, 5, 0.95);
-            padding: 50px 0;
+            padding: 40px 0;
             border-top: 1px solid rgba(138, 43, 226, 0.2);
-            margin-top: 50px;
+            margin-top: 40px;
             color: #777;
             font-size: 14px;
         }
         .footer-content {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 40px;
+            gap: 30px;
         }
         footer h4 {
             color: #fff;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
             font-size: 16px;
         }
         footer ul {
             list-style: none;
         }
         footer ul li {
-            margin-bottom: 8px;
+            margin-bottom: 6px;
         }
         footer ul li a {
             color: #999;
             text-decoration: none;
-            transition: 0.2s;
-        }
-        footer ul li a:hover {
-            color: #00f3ff;
         }
 
+        /* Mobile Optimization Fix */
         @media (max-width: 768px) {
             .hero {
-                grid-template-columns: 1fr;
-                padding: 40px 20px;
+                grid-template-columns: 1.1fr 0.9fr; /* Mobile par bhi side-by-side box maintain rakha hai */
+                gap: 15px;
+                padding: 20px 15px;
+                margin: 15px 0;
             }
             .hero h1 {
-                font-size: 30px;
+                font-size: 20px;
+                margin-bottom: 8px;
+            }
+            .hero p {
+                font-size: 11px;
+                margin-bottom: 15px;
+            }
+            .studio-badge {
+                font-size: 9px;
+                padding: 4px 8px;
+                margin-bottom: 10px;
+                letter-spacing: 1px;
+            }
+            .btn {
+                padding: 8px 14px;
+                font-size: 12px;
+            }
+            .hero-img {
+                height: 180px; /* Mobile par box aur image ki perfect height taake screen mein fit aaye */
             }
             .features, .product-grid, .footer-content {
                 grid-template-columns: 1fr;
@@ -374,16 +365,16 @@
             <button class="menu-btn">&#9776;</button>
         </header>
 
-        <!-- Neon Studio Hero Section with display.jpeg -->
+        <!-- Updated Cargo Denim Hero Section -->
         <section class="hero">
             <div class="hero-content">
                 <span class="studio-badge">⚡ Neon Studio Edition</span>
-                <h1>Elevate Your <span>Streetwear</span></h1>
-                <p>Handcrafted denim jeans and tactical fits designed for those who command extreme style, comfort, and futuristic gaming aesthetics.</p>
+                <h1>Next-Gen <span>Cargo Denim</span> Baggy Trousers</h1>
+                <p>Premium baggy fit cargo trousers engineered with top-tier denim fabric for extreme street style and comfort.</p>
                 <a href="#shop" class="btn">Explore Studio &rarr;</a>
             </div>
             <div class="hero-img-box">
-                <img src="display.jpeg" alt="Streetwear Denim Showcase" class="hero-img" onerror="this.src='pant.jpg'">
+                <img src="display.jpeg" alt="Cargo Denim Trousers Showcase" class="hero-img" onerror="this.src='pant.jpg'">
             </div>
         </section>
 
@@ -405,10 +396,10 @@
         </section>
 
         <section class="section" id="shop">
-            <div class="section-title">Studio Collection - Denim Jeans</div>
+            <div class="section-title">Studio Collection - Cargo Trousers</div>
             
             <div class="product-grid">
-                <!-- Product 1: Old Product (Grey Cargo) -->
+                <!-- Product 1: Grey Cargo Baggy Denim Pant -->
                 <div class="product-card">
                     <img src="display.jpeg" alt="Grey Cargo Baggy Denim Pant" class="product-img" onerror="this.src='pant.jpg'">
                     <div class="product-info">
@@ -420,7 +411,7 @@
                     </div>
                 </div>
 
-                <!-- Product 2: New Product (Denim Cargo Baggy Pant) -->
+                <!-- Product 2: Denim Cargo Baggy Pant -->
                 <div class="product-card">
                     <img src="product.jpeg" alt="Denim Cargo Baggy Pant" class="product-img" onerror="this.src='pant.jpg'">
                     <div class="product-info">
@@ -438,7 +429,7 @@
             <div class="footer-content">
                 <div>
                     <h4>ZH APPAREL STUDIO</h4>
-                    <p style="margin-bottom: 20px;">Next-gen denim for modern streetwear enthusiasts.</p>
+                    <p style="margin-bottom: 15px;">Next-gen denim cargo trousers for modern streetwear enthusiasts.</p>
                     <p>&copy; 2026 ZH Apparel. All rights reserved.</p>
                 </div>
                 <div>
