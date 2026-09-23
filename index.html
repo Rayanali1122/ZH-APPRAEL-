@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZH Apparel - Neon Studio Experience</title>
+    <title>ZH Apparel - Multi-Light Neon Studio</title>
     <style>
         * {
             box-sizing: border-box;
@@ -12,13 +12,14 @@
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
         }
         body {
-            background-color: #020205;
+            background-color: #010103;
             color: #ffffff;
             line-height: 1.5;
             background-image: 
-                radial-gradient(circle at 15% 15%, rgba(138, 43, 226, 0.15) 0%, transparent 40%),
-                radial-gradient(circle at 85% 85%, rgba(0, 243, 255, 0.12) 0%, transparent 40%),
-                radial-gradient(circle at 50% 50%, rgba(20, 10, 40, 0.8) 0%, #020205 90%);
+                radial-gradient(circle at 10% 10%, rgba(138, 43, 226, 0.2) 0%, transparent 35%),
+                radial-gradient(circle at 90% 40%, rgba(0, 243, 255, 0.15) 0%, transparent 35%),
+                radial-gradient(circle at 50% 85%, rgba(255, 0, 128, 0.12) 0%, transparent 40%),
+                #010103;
             min-height: 100vh;
         }
         .container {
@@ -31,9 +32,9 @@
             justify-content: space-between;
             align-items: center;
             padding: 20px 0;
-            background: rgba(2, 2, 5, 0.85);
+            background: rgba(1, 1, 3, 0.9);
             backdrop-filter: blur(16px);
-            border-bottom: 1px solid rgba(0, 243, 255, 0.15);
+            border-bottom: 1px solid rgba(0, 243, 255, 0.2);
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -53,7 +54,7 @@
             font-weight: 800;
             letter-spacing: 1px;
             color: #fff;
-            text-shadow: 0 0 12px rgba(138, 43, 226, 0.8), 0 0 25px rgba(0, 243, 255, 0.6);
+            text-shadow: 0 0 12px rgba(138, 43, 226, 0.9), 0 0 25px rgba(0, 243, 255, 0.6);
         }
         .logo span {
             font-weight: 300;
@@ -86,31 +87,20 @@
             cursor: pointer;
         }
         
-        /* Studio Neon Hero Section */
+        /* 1. Hero Section - Purple & Cyan Multi-Lighting Zone */
         .hero {
             display: grid;
             grid-template-columns: 1.1fr 0.9fr;
             gap: 30px;
             align-items: center;
             padding: 50px 35px;
-            background: linear-gradient(135deg, rgba(15, 8, 35, 0.85), rgba(5, 3, 12, 0.95));
+            background: linear-gradient(135deg, rgba(20, 8, 45, 0.9), rgba(5, 3, 15, 0.95));
             border-radius: 20px;
             margin: 30px 0;
-            border: 1px solid rgba(0, 243, 255, 0.35);
-            box-shadow: 0 0 40px rgba(138, 43, 226, 0.25), inset 0 0 30px rgba(0, 243, 255, 0.08);
+            border: 1px solid rgba(138, 43, 226, 0.5);
+            box-shadow: 0 0 45px rgba(138, 43, 226, 0.3), inset 0 0 25px rgba(0, 243, 255, 0.1);
             position: relative;
             overflow: hidden;
-        }
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: -60px;
-            left: -60px;
-            width: 180px;
-            height: 180px;
-            background: #8a2be2;
-            filter: blur(90px);
-            opacity: 0.5;
         }
         .hero-content {
             z-index: 2;
@@ -124,15 +114,15 @@
         }
         .hero h1 span {
             color: #00f3ff;
-            text-shadow: 0 0 15px rgba(0, 243, 255, 0.6);
+            text-shadow: 0 0 15px rgba(0, 243, 255, 0.7);
         }
         .hero-creator {
             font-size: 14px;
-            color: #a855f7;
-            font-weight: 600;
+            color: #ff007f;
+            font-weight: 700;
             margin-bottom: 15px;
             letter-spacing: 1px;
-            text-shadow: 0 0 10px rgba(168, 85, 247, 0.4);
+            text-shadow: 0 0 12px rgba(255, 0, 127, 0.6);
         }
         .hero p {
             color: #ccc;
@@ -141,9 +131,9 @@
         }
         .studio-badge {
             display: inline-block;
-            background: rgba(0, 243, 255, 0.1);
-            border: 1px solid rgba(0, 243, 255, 0.4);
-            color: #00f3ff;
+            background: rgba(138, 43, 226, 0.2);
+            border: 1px solid rgba(138, 43, 226, 0.6);
+            color: #d8b4fe;
             padding: 6px 14px;
             border-radius: 20px;
             font-size: 11px;
@@ -151,24 +141,24 @@
             text-transform: uppercase;
             letter-spacing: 2px;
             margin-bottom: 15px;
-            box-shadow: 0 0 15px rgba(0, 243, 255, 0.2);
+            box-shadow: 0 0 15px rgba(138, 43, 226, 0.4);
         }
         .hero-img-box {
             position: relative;
             z-index: 2;
             border-radius: 14px;
             overflow: hidden;
-            border: 1px solid rgba(0, 243, 255, 0.4);
+            border: 1px solid rgba(0, 243, 255, 0.5);
             background: #000;
             cursor: pointer;
-            box-shadow: 0 0 25px rgba(0, 243, 255, 0.2);
+            box-shadow: 0 0 30px rgba(0, 243, 255, 0.3);
         }
         .hero-img {
             width: 100%;
             height: 300px;
             object-fit: contain;
             display: block;
-            background-color: #040408;
+            background-color: #030308;
         }
 
         .btn {
@@ -186,6 +176,7 @@
             box-shadow: 0 0 30px rgba(0, 243, 255, 0.8), 0 0 30px rgba(138, 43, 226, 0.8);
             transform: translateY(-2px);
         }
+        
         .section {
             padding: 40px 0;
         }
@@ -196,62 +187,65 @@
             color: #fff;
             margin-bottom: 25px;
             font-weight: 700;
-            border-left: 4px solid #00f3ff;
+            border-left: 4px solid #ff007f;
             padding-left: 12px;
-            text-shadow: 0 0 10px rgba(0, 243, 255, 0.4);
+            text-shadow: 0 0 10px rgba(255, 0, 127, 0.5);
         }
+
+        /* 2. Features Section - Cyan & Blue Multi-Lighting Zone */
         .features {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 20px;
         }
         .feature-card {
-            background: rgba(12, 8, 25, 0.7);
+            background: rgba(5, 15, 30, 0.7);
             backdrop-filter: blur(12px);
-            border: 1px solid rgba(138, 43, 226, 0.3);
+            border: 1px solid rgba(0, 243, 255, 0.35);
             padding: 20px;
             border-radius: 12px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.6);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.6), inset 0 0 15px rgba(0, 243, 255, 0.08);
             transition: 0.3s;
         }
         .feature-card:hover {
-            border-color: rgba(0, 243, 255, 0.5);
-            box-shadow: 0 0 20px rgba(0, 243, 255, 0.2);
+            border-color: rgba(0, 243, 255, 0.8);
+            box-shadow: 0 0 25px rgba(0, 243, 255, 0.4);
         }
         .feature-card h3 {
             font-size: 15px;
             margin-bottom: 6px;
-            color: #fff;
+            color: #00f3ff;
+            text-shadow: 0 0 8px rgba(0, 243, 255, 0.4);
         }
         .feature-card p {
-            color: #999;
+            color: #bbb;
             font-size: 12px;
         }
         
-        /* Product Grid (3 columns on laptop) */
+        /* 3. Product Grid Section - Pink & Neon Multi-Lighting Zone */
         .product-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 20px;
         }
         .product-card {
-            background: rgba(10, 7, 20, 0.85);
+            background: rgba(20, 5, 20, 0.8);
             backdrop-filter: blur(14px);
-            border: 1px solid rgba(138, 43, 226, 0.35);
+            border: 1px solid rgba(255, 0, 127, 0.4);
             border-radius: 16px;
             overflow: hidden;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.8);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.8), inset 0 0 15px rgba(255, 0, 127, 0.08);
             transition: 0.3s ease;
         }
         .product-card:hover {
-            border-color: rgba(0, 243, 255, 0.6);
-            box-shadow: 0 0 25px rgba(0, 243, 255, 0.3);
+            border-color: rgba(255, 0, 127, 0.9);
+            box-shadow: 0 0 30px rgba(255, 0, 127, 0.4);
         }
         .product-img-wrap {
             width: 100%;
             height: 260px;
             overflow: hidden;
-            background: #040408;
+            background: #030308;
             cursor: pointer;
             position: relative;
         }
@@ -261,11 +255,11 @@
             bottom: 10px;
             right: 10px;
             background: rgba(0, 0, 0, 0.85);
-            color: #00f3ff;
+            color: #ff007f;
             font-size: 10px;
             padding: 4px 8px;
             border-radius: 4px;
-            border: 1px solid rgba(0, 243, 255, 0.3);
+            border: 1px solid rgba(255, 0, 127, 0.4);
             opacity: 0;
             transition: opacity 0.3s ease;
         }
@@ -286,10 +280,11 @@
         }
         .product-category {
             font-size: 11px;
-            color: #00f3ff;
+            color: #ff007f;
             text-transform: uppercase;
             letter-spacing: 1.5px;
             margin-bottom: 4px;
+            text-shadow: 0 0 8px rgba(255, 0, 127, 0.4);
         }
         .product-name {
             font-size: 16px;
@@ -341,7 +336,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(2, 2, 5, 0.95);
+            background-color: rgba(1, 1, 3, 0.95);
             justify-content: center;
             align-items: center;
             padding: 20px;
@@ -369,9 +364,9 @@
         }
 
         footer {
-            background: rgba(2, 2, 5, 0.95);
+            background: rgba(1, 1, 3, 0.95);
             padding: 40px 0;
-            border-top: 1px solid rgba(0, 243, 255, 0.15);
+            border-top: 1px solid rgba(255, 0, 127, 0.2);
             margin-top: 40px;
             color: #777;
             font-size: 14px;
@@ -448,10 +443,10 @@
             <button class="menu-btn">&#9776;</button>
         </header>
 
-        <!-- Hero Section with Muhammad Rayan Name -->
+        <!-- Hero Section (Purple/Cyan Lighting Zone) -->
         <section class="hero">
             <div class="hero-content">
-                <span class="studio-badge">⚡ Neon Studio Edition</span>
+                <span class="studio-badge">⚡ Multi-Light Studio Edition</span>
                 <div class="hero-creator">Curated by Muhammad Rayan</div>
                 <h1>Next-Gen <span>Cargo Denim</span> Baggy Trousers</h1>
                 <p>Premium baggy fit cargo trousers engineered with heavy-duty 12oz denim fabric for extreme street style and comfort.</p>
@@ -462,6 +457,7 @@
             </div>
         </section>
 
+        <!-- Features Section (Cyan/Blue Lighting Zone) -->
         <section class="section">
             <div class="features">
                 <div class="feature-card">
@@ -479,7 +475,7 @@
             </div>
         </section>
 
-        <!-- Products Section -->
+        <!-- Products Section (Pink/Neon Multi-Lighting Zone) -->
         <section class="section" id="shop">
             <div class="section-title">Studio Collection - Cargo Trousers</div>
             
@@ -494,7 +490,7 @@
                         <div class="product-name">Grey Cargo Baggy Denim Pant</div>
                         <div class="product-price">Rs. 2,000 <span>+ Rs. 400 delivery</span></div>
                         <p class="product-desc"><strong>Details:</strong> Premium heavy 12oz denim fabric, 6-pocket cargo utility layout, baggy streetwear fit.</p>
-                        <p style="font-size: 12px; color: #00f3ff; margin-bottom: 8px;">Sizes: 32, 34, 36</p>
+                        <p style="font-size: 12px; color: #ff007f; margin-bottom: 8px;">Sizes: 32, 34, 36</p>
                         <a href="https://wa.me/923098858061?text=Hi,%20I%20want%20to%20order%20Grey%20Cargo%20Baggy%20Denim%20Pant%20(Rs.%202,000)." class="whatsapp-btn" target="_blank">Order via WhatsApp</a>
                     </div>
                 </div>
@@ -509,7 +505,7 @@
                         <div class="product-name">Denim Cargo Baggy Pant</div>
                         <div class="product-price">Rs. 1,950 <span>+ Rs. 400 delivery</span></div>
                         <p class="product-desc"><strong>Details:</strong> Premium 12oz wash denim, tactical 6-pocket cargo styling, relaxed baggy cut[cite: 2].</p>
-                        <p style="font-size: 12px; color: #00f3ff; margin-bottom: 8px;">Sizes: 30, 32, 34, 36</p>
+                        <p style="font-size: 12px; color: #ff007f; margin-bottom: 8px;">Sizes: 30, 32, 34, 36</p>
                         <a href="https://wa.me/923098858061?text=Hi,%20I%20want%20to%20order%20Denim%20Cargo%20Baggy%20Pant%20(Rs.%201,950)." class="whatsapp-btn" target="_blank">Order via WhatsApp</a>
                     </div>
                 </div>
