@@ -136,12 +136,14 @@
             overflow: hidden;
             border: 1px solid rgba(138, 43, 226, 0.5);
             background: #000;
+            cursor: pointer;
         }
         .hero-img {
             width: 100%;
-            height: 320px;
-            object-fit: cover;
+            height: 300px;
+            object-fit: contain; /* Full picture view without cropping */
             display: block;
+            background-color: #050508;
         }
 
         .btn {
@@ -190,11 +192,11 @@
             font-size: 13px;
         }
         
-        /* Product Grid & Laptop Size Fix */
+        /* Product Grid - Laptop par 3 columns taake zyada products show hon */
         .product-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 30px;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
         }
         .product-card {
             background: rgba(12, 10, 20, 0.8);
@@ -206,9 +208,9 @@
         }
         .product-img-wrap {
             width: 100%;
-            height: 240px; /* Laptop ke liye size chhota aur balanced kar diya hai */
+            height: 260px;
             overflow: hidden;
-            background: #000;
+            background: #050508;
             cursor: pointer;
             position: relative;
         }
@@ -217,9 +219,9 @@
             position: absolute;
             bottom: 10px;
             right: 10px;
-            background: rgba(0, 0, 0, 0.7);
+            background: rgba(0, 0, 0, 0.8);
             color: #00f3ff;
-            font-size: 11px;
+            font-size: 10px;
             padding: 4px 8px;
             border-radius: 4px;
             opacity: 0;
@@ -231,42 +233,42 @@
         .product-img {
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            object-fit: contain; /* Full picture displayed without cropping */
             transition: transform 0.3s ease;
         }
         .product-img-wrap:hover .product-img {
-            transform: scale(1.05);
+            transform: scale(1.03);
         }
         .product-info {
-            padding: 20px;
+            padding: 15px;
         }
         .product-category {
-            font-size: 12px;
+            font-size: 11px;
             color: #00f3ff;
             text-transform: uppercase;
             letter-spacing: 1.5px;
-            margin-bottom: 6px;
+            margin-bottom: 4px;
         }
         .product-name {
-            font-size: 18px;
+            font-size: 16px;
             font-weight: 700;
             margin-bottom: 6px;
         }
         .product-price {
-            font-size: 17px;
+            font-size: 16px;
             font-weight: 600;
             color: #fff;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
         .product-price span {
-            font-size: 12px;
+            font-size: 11px;
             color: #888;
             font-weight: 400;
         }
         .product-desc {
-            font-size: 13px;
+            font-size: 12px;
             color: #bbb;
-            margin-bottom: 12px;
+            margin-bottom: 10px;
             line-height: 1.4;
         }
         .whatsapp-btn {
@@ -275,11 +277,12 @@
             background: linear-gradient(135deg, #25D366, #1ebe57);
             color: white;
             text-align: center;
-            padding: 12px;
+            padding: 10px;
             border-radius: 8px;
             text-decoration: none;
             font-weight: 600;
-            margin-top: 10px;
+            margin-top: 8px;
+            font-size: 13px;
             box-shadow: 0 0 15px rgba(37, 211, 102, 0.4);
         }
 
@@ -292,7 +295,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.9);
+            background-color: rgba(0, 0, 0, 0.92);
             justify-content: center;
             align-items: center;
             padding: 20px;
@@ -403,8 +406,8 @@
                 <p>Premium baggy fit cargo trousers engineered with heavy-duty 12oz denim fabric for extreme street style and comfort.</p>
                 <a href="#shop" class="btn">Explore Studio &rarr;</a>
             </div>
-            <div class="hero-img-box">
-                <img src="display.jpeg" alt="Cargo Denim Trousers Showcase" class="hero-img" onclick="openModal(this.src)" onerror="this.src='pant.jpg'">
+            <div class="hero-img-box" onclick="openModal('display.jpeg')">
+                <img src="display.jpeg" alt="Cargo Denim Trousers Showcase" class="hero-img" onerror="this.src='pant.jpg'">
             </div>
         </section>
 
@@ -425,7 +428,7 @@
             </div>
         </section>
 
-        <!-- Products Section with Clickable Full-Size Image Preview -->
+        <!-- Products Section (3 columns on laptop for compact view) -->
         <section class="section" id="shop">
             <div class="section-title">Studio Collection - Cargo Trousers</div>
             
@@ -439,8 +442,8 @@
                         <div class="product-category">Neon Denim Series</div>
                         <div class="product-name">Grey Cargo Baggy Denim Pant</div>
                         <div class="product-price">Rs. 2,000 <span>+ Rs. 400 delivery</span></div>
-                        <p class="product-desc"><strong>Details:</strong> Premium heavy 12oz denim fabric, modern 6-pocket cargo utility layout, comfortable baggy streetwear fit.</p>
-                        <p style="font-size: 13px; color: #00f3ff; margin-bottom: 10px;">Sizes Available: 32, 34, 36</p>
+                        <p class="product-desc"><strong>Details:</strong> Premium heavy 12oz denim fabric, 6-pocket cargo utility layout, baggy streetwear fit.</p>
+                        <p style="font-size: 12px; color: #00f3ff; margin-bottom: 8px;">Sizes: 32, 34, 36</p>
                         <a href="https://wa.me/923098858061?text=Hi,%20I%20want%20to%20order%20Grey%20Cargo%20Baggy%20Denim%20Pant%20(Rs.%202,000)." class="whatsapp-btn" target="_blank">Order via WhatsApp</a>
                     </div>
                 </div>
@@ -454,8 +457,8 @@
                         <div class="product-category">Neon Denim Series</div>
                         <div class="product-name">Denim Cargo Baggy Pant</div>
                         <div class="product-price">Rs. 1,950 <span>+ Rs. 400 delivery</span></div>
-                        <p class="product-desc"><strong>Details:</strong> Premium 12oz wash denim, tactical 6-pocket cargo styling, ultra-relaxed baggy cut for ultimate comfort[cite: 2].</p>
-                        <p style="font-size: 13px; color: #00f3ff; margin-bottom: 10px;">Sizes Available: 30, 32, 34, 36</p>
+                        <p class="product-desc"><strong>Details:</strong> Premium 12oz wash denim, tactical 6-pocket cargo styling, relaxed baggy cut[cite: 2].</p>
+                        <p style="font-size: 12px; color: #00f3ff; margin-bottom: 8px;">Sizes: 30, 32, 34, 36</p>
                         <a href="https://wa.me/923098858061?text=Hi,%20I%20want%20to%20order%20Denim%20Cargo%20Baggy%20Pant%20(Rs.%201,950)." class="whatsapp-btn" target="_blank">Order via WhatsApp</a>
                     </div>
                 </div>
@@ -487,7 +490,6 @@
     </div>
 
     <script>
-        // JavaScript for Image Zoom Modal Popup
         function openModal(imageSrc) {
             const modal = document.getElementById('imageModal');
             const fullImg = document.getElementById('fullImage');
