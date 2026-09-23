@@ -12,10 +12,13 @@
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
         }
         body {
-            background-color: #030305;
+            background-color: #020205;
             color: #ffffff;
             line-height: 1.5;
-            background-image: radial-gradient(circle at 50% 10%, #120826 0%, #030305 70%);
+            background-image: 
+                radial-gradient(circle at 15% 15%, rgba(138, 43, 226, 0.15) 0%, transparent 40%),
+                radial-gradient(circle at 85% 85%, rgba(0, 243, 255, 0.12) 0%, transparent 40%),
+                radial-gradient(circle at 50% 50%, rgba(20, 10, 40, 0.8) 0%, #020205 90%);
             min-height: 100vh;
         }
         .container {
@@ -28,9 +31,9 @@
             justify-content: space-between;
             align-items: center;
             padding: 20px 0;
-            background: rgba(5, 5, 8, 0.85);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(138, 43, 226, 0.2);
+            background: rgba(2, 2, 5, 0.85);
+            backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(0, 243, 255, 0.15);
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -50,14 +53,14 @@
             font-weight: 800;
             letter-spacing: 1px;
             color: #fff;
-            text-shadow: 0 0 10px rgba(138, 43, 226, 0.8), 0 0 20px rgba(0, 243, 255, 0.5);
+            text-shadow: 0 0 12px rgba(138, 43, 226, 0.8), 0 0 25px rgba(0, 243, 255, 0.6);
         }
         .logo span {
             font-weight: 300;
             font-size: 16px;
             margin-left: 5px;
             color: #00f3ff;
-            text-shadow: 0 0 8px rgba(0, 243, 255, 0.8);
+            text-shadow: 0 0 10px rgba(0, 243, 255, 0.8);
         }
         .nav-links {
             display: flex;
@@ -65,7 +68,7 @@
             list-style: none;
         }
         .nav-links a {
-            color: #bbb;
+            color: #aaa;
             text-decoration: none;
             font-weight: 500;
             transition: 0.3s;
@@ -83,27 +86,39 @@
             cursor: pointer;
         }
         
+        /* Studio Neon Hero Section */
         .hero {
             display: grid;
             grid-template-columns: 1.1fr 0.9fr;
             gap: 30px;
             align-items: center;
             padding: 50px 35px;
-            background: linear-gradient(135deg, rgba(15, 10, 30, 0.9), rgba(5, 5, 10, 0.95));
+            background: linear-gradient(135deg, rgba(15, 8, 35, 0.85), rgba(5, 3, 12, 0.95));
             border-radius: 20px;
             margin: 30px 0;
-            border: 1px solid rgba(0, 243, 255, 0.3);
-            box-shadow: 0 0 30px rgba(138, 43, 226, 0.2), inset 0 0 20px rgba(0, 243, 255, 0.1);
+            border: 1px solid rgba(0, 243, 255, 0.35);
+            box-shadow: 0 0 40px rgba(138, 43, 226, 0.25), inset 0 0 30px rgba(0, 243, 255, 0.08);
             position: relative;
             overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -60px;
+            left: -60px;
+            width: 180px;
+            height: 180px;
+            background: #8a2be2;
+            filter: blur(90px);
+            opacity: 0.5;
         }
         .hero-content {
             z-index: 2;
         }
         .hero h1 {
-            font-size: 38px;
+            font-size: 36px;
             font-weight: 800;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
             line-height: 1.15;
             color: #fff;
         }
@@ -111,9 +126,17 @@
             color: #00f3ff;
             text-shadow: 0 0 15px rgba(0, 243, 255, 0.6);
         }
+        .hero-creator {
+            font-size: 14px;
+            color: #a855f7;
+            font-weight: 600;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+            text-shadow: 0 0 10px rgba(168, 85, 247, 0.4);
+        }
         .hero p {
             color: #ccc;
-            font-size: 15px;
+            font-size: 14px;
             margin-bottom: 25px;
         }
         .studio-badge {
@@ -123,27 +146,29 @@
             color: #00f3ff;
             padding: 6px 14px;
             border-radius: 20px;
-            font-size: 12px;
+            font-size: 11px;
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 2px;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
+            box-shadow: 0 0 15px rgba(0, 243, 255, 0.2);
         }
         .hero-img-box {
             position: relative;
             z-index: 2;
             border-radius: 14px;
             overflow: hidden;
-            border: 1px solid rgba(138, 43, 226, 0.5);
+            border: 1px solid rgba(0, 243, 255, 0.4);
             background: #000;
             cursor: pointer;
+            box-shadow: 0 0 25px rgba(0, 243, 255, 0.2);
         }
         .hero-img {
             width: 100%;
             height: 300px;
-            object-fit: contain; /* Full picture view without cropping */
+            object-fit: contain;
             display: block;
-            background-color: #050508;
+            background-color: #040408;
         }
 
         .btn {
@@ -155,7 +180,11 @@
             font-weight: 600;
             text-decoration: none;
             transition: all 0.3s ease;
-            box-shadow: 0 0 15px rgba(0, 243, 255, 0.4);
+            box-shadow: 0 0 20px rgba(0, 243, 255, 0.4);
+        }
+        .btn:hover {
+            box-shadow: 0 0 30px rgba(0, 243, 255, 0.8), 0 0 30px rgba(138, 43, 226, 0.8);
+            transform: translateY(-2px);
         }
         .section {
             padding: 40px 0;
@@ -169,6 +198,7 @@
             font-weight: 700;
             border-left: 4px solid #00f3ff;
             padding-left: 12px;
+            text-shadow: 0 0 10px rgba(0, 243, 255, 0.4);
         }
         .features {
             display: grid;
@@ -176,41 +206,52 @@
             gap: 20px;
         }
         .feature-card {
-            background: rgba(15, 12, 25, 0.6);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(138, 43, 226, 0.2);
+            background: rgba(12, 8, 25, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(138, 43, 226, 0.3);
             padding: 20px;
             border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.6);
+            transition: 0.3s;
+        }
+        .feature-card:hover {
+            border-color: rgba(0, 243, 255, 0.5);
+            box-shadow: 0 0 20px rgba(0, 243, 255, 0.2);
         }
         .feature-card h3 {
-            font-size: 16px;
-            margin-bottom: 8px;
+            font-size: 15px;
+            margin-bottom: 6px;
             color: #fff;
         }
         .feature-card p {
             color: #999;
-            font-size: 13px;
+            font-size: 12px;
         }
         
-        /* Product Grid - Laptop par 3 columns taake zyada products show hon */
+        /* Product Grid (3 columns on laptop) */
         .product-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 20px;
         }
         .product-card {
-            background: rgba(12, 10, 20, 0.8);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(138, 43, 226, 0.3);
+            background: rgba(10, 7, 20, 0.85);
+            backdrop-filter: blur(14px);
+            border: 1px solid rgba(138, 43, 226, 0.35);
             border-radius: 16px;
             overflow: hidden;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.7);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.8);
+            transition: 0.3s ease;
+        }
+        .product-card:hover {
+            border-color: rgba(0, 243, 255, 0.6);
+            box-shadow: 0 0 25px rgba(0, 243, 255, 0.3);
         }
         .product-img-wrap {
             width: 100%;
             height: 260px;
             overflow: hidden;
-            background: #050508;
+            background: #040408;
             cursor: pointer;
             position: relative;
         }
@@ -219,11 +260,12 @@
             position: absolute;
             bottom: 10px;
             right: 10px;
-            background: rgba(0, 0, 0, 0.8);
+            background: rgba(0, 0, 0, 0.85);
             color: #00f3ff;
             font-size: 10px;
             padding: 4px 8px;
             border-radius: 4px;
+            border: 1px solid rgba(0, 243, 255, 0.3);
             opacity: 0;
             transition: opacity 0.3s ease;
         }
@@ -233,7 +275,7 @@
         .product-img {
             width: 100%;
             height: 100%;
-            object-fit: contain; /* Full picture displayed without cropping */
+            object-fit: contain;
             transition: transform 0.3s ease;
         }
         .product-img-wrap:hover .product-img {
@@ -284,9 +326,13 @@
             margin-top: 8px;
             font-size: 13px;
             box-shadow: 0 0 15px rgba(37, 211, 102, 0.4);
+            transition: 0.3s;
+        }
+        .whatsapp-btn:hover {
+            box-shadow: 0 0 25px rgba(37, 211, 102, 0.8);
         }
 
-        /* Full Screen Image Modal Popup */
+        /* Modal Popup */
         .modal {
             display: none;
             position: fixed;
@@ -295,7 +341,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.92);
+            background-color: rgba(2, 2, 5, 0.95);
             justify-content: center;
             align-items: center;
             padding: 20px;
@@ -304,9 +350,9 @@
             max-width: 90%;
             max-height: 90vh;
             object-fit: contain;
-            border-radius: 10px;
+            border-radius: 12px;
             border: 2px solid #00f3ff;
-            box-shadow: 0 0 30px rgba(0, 243, 255, 0.5);
+            box-shadow: 0 0 40px rgba(0, 243, 255, 0.6);
         }
         .close-modal {
             position: absolute;
@@ -323,9 +369,9 @@
         }
 
         footer {
-            background: rgba(3, 3, 5, 0.95);
+            background: rgba(2, 2, 5, 0.95);
             padding: 40px 0;
-            border-top: 1px solid rgba(138, 43, 226, 0.2);
+            border-top: 1px solid rgba(0, 243, 255, 0.15);
             margin-top: 40px;
             color: #777;
             font-size: 14px;
@@ -360,12 +406,16 @@
                 margin: 15px 0;
             }
             .hero h1 {
-                font-size: 20px;
-                margin-bottom: 8px;
+                font-size: 18px;
+                margin-bottom: 6px;
+            }
+            .hero-creator {
+                font-size: 11px;
+                margin-bottom: 10px;
             }
             .hero p {
                 font-size: 11px;
-                margin-bottom: 15px;
+                margin-bottom: 12px;
             }
             .hero-img {
                 height: 180px;
@@ -398,10 +448,11 @@
             <button class="menu-btn">&#9776;</button>
         </header>
 
-        <!-- Hero Section -->
+        <!-- Hero Section with Muhammad Rayan Name -->
         <section class="hero">
             <div class="hero-content">
                 <span class="studio-badge">⚡ Neon Studio Edition</span>
+                <div class="hero-creator">Curated by Muhammad Rayan</div>
                 <h1>Next-Gen <span>Cargo Denim</span> Baggy Trousers</h1>
                 <p>Premium baggy fit cargo trousers engineered with heavy-duty 12oz denim fabric for extreme street style and comfort.</p>
                 <a href="#shop" class="btn">Explore Studio &rarr;</a>
@@ -428,7 +479,7 @@
             </div>
         </section>
 
-        <!-- Products Section (3 columns on laptop for compact view) -->
+        <!-- Products Section -->
         <section class="section" id="shop">
             <div class="section-title">Studio Collection - Cargo Trousers</div>
             
